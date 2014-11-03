@@ -1,5 +1,5 @@
-# Make vim the default editor
-export EDITOR="vim";
+# Make sublime the default editor
+export EDITOR="subl -w";
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768;
@@ -8,9 +8,9 @@ export HISTCONTROL=ignoredups;
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
-# Prefer US English and use UTF-8
-export LANG="en_US.UTF-8";
-export LC_ALL="en_US.UTF-8";
+# Prefer UK English and use UTF-8
+export LANG="en_GB.UTF-8";
+export LC_ALL="en_GB.UTF-8";
 
 # Highlight section titles in manual pages
 export LESS_TERMCAP_md="${yellow}";
@@ -23,3 +23,10 @@ export GREP_OPTIONS="--color=auto";
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+
+# Don't trash prompt when sourcing a venv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# TweetDeck stuff
+export TDI="${HOME}/workspace/infra"
+export TDC="${HOME}/workspace/tweetdeck-chrome"
