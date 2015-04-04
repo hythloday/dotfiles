@@ -21,12 +21,6 @@ export MANPAGER="less -X";
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto";
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications";
-
 # Don't trash prompt when sourcing a venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-# TweetDeck stuff
-export TDI="${HOME}/workspace/infra"
-export TDC="${HOME}/workspace/tweetdeck-chrome"
