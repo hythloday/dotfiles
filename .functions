@@ -26,6 +26,17 @@ function cdf() { # short for `cdfinder`
 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
 
+# Change top-most Finder window location to be working directory
+function fcd() { # opposite of `cdf`
+  local path=""
+  IFS='/' read -a path <<< "${PWD#/}"
+  local tell_path=$(for (( idx=${#path[@]}-1 ; idx>=0 ; idx-- )) ; do
+    printf "folder \"${path[idx]}\" of ";
+  done)
+  local tell="tell app \"Finder\" to set target of Finder window 1 to $tell_path startup disk"
+  osascript -e "$tell" 2> /dev/null
+}
+
 # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
 function targz() {
 	local tmpFile="${@%/}.tar";
