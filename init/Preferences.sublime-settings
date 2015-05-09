@@ -2,7 +2,7 @@
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
-	"draw_white_space": "all",
+	"draw_white_space": "none",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -20,10 +20,10 @@
 		"node_modules"
 	],
 	"font_face": "Anonymous Pro",
-	"font_size": 13,
+	"font_size": 15,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
-	"line_padding_bottom": 5,
+	"line_padding_bottom": 2,
 	"match_brackets": true,
 	"match_brackets_angle": true,
 	"remember_open_files": false,
