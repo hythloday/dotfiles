@@ -124,3 +124,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Start Sublime Text 3
+alias subl="~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
