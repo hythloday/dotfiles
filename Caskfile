@@ -20,8 +20,10 @@ cask install seashore 2> /dev/null
 cask install skype 2> /dev/null
 cask install sourcetree 2> /dev/null
 cask install spotify 2> /dev/null
+cask install steam 2> /dev/null
 cask install sublime-text3 2> /dev/null
 cask install thunderbird 2> /dev/null
 cask install transmission 2> /dev/null
 cask install vlc 2> /dev/null
+cask install xmind 2> /dev/null
 cask install xquartz 2> /dev/null
