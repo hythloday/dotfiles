@@ -24,3 +24,5 @@ export GREP_OPTIONS="--color=auto";
 # Don't trash prompt when sourcing a venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# Put homebrew casks in local applications
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
