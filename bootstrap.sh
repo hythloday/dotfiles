@@ -24,3 +24,6 @@ else
 	fi;
 fi;
 unset doIt;
+
+brew tap Homebrew/bundle
+brew bundle
