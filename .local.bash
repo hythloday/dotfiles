@@ -44,3 +44,14 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
+
+# AWS autocompletion
+complete -C aws_completer aws
+
+
+#Thread stuff
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh 2>/dev/null
