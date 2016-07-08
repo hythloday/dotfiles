@@ -1,82 +1,180 @@
-# Install command-line tools using Homebrew
-# Usage: `brew bundle Brewfile`
-
-# Make sure we’re using the latest Homebrew
-update
-
-# Upgrade any already-installed formulae
-upgrade
-
-# Install GNU core utilities (those that come with OS X are outdated)
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-install coreutils
-#sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-
-# Install some other useful utilities like `sponge`
-install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
-install findutils
-# Install GNU `sed`, overwriting the built-in `sed`
-install gnu-sed --default-names
-# Install Bash 4
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
-install bash
-install bash-completion2
-
-# Install wget with IRI support
-install wget --enable-iri
-
-# Install RingoJS and Narwhal
-# Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
-#install ringojs
-#install narwhal
-
-# Install more recent versions of some OS X tools
-install vim --override-system-vi
-install homebrew/dupes/grep
-install homebrew/dupes/screen
-#install homebrew/php/php55 --with-gmp
-
-# Install some CTF tools; see https://github.com/ctfs/write-ups
-#install bfg
-#install binutils
-#install binwalk
-#install cifer
-#install dex2jar
-#install dns2tcp
-#install fcrackzip
-#install foremost
-#install hashpump
-#install hydra
-#install john
-#install knock
-#install nmap
-#install pngcheck
-#install sqlmap
-#install tcpflow
-#install tcpreplay
-#install tcptrace
-#install ucspi-tcp # `tcpserver` et al.
-#install xpdf
-#install xz
-
-# Install other useful binaries
-#install ack
-#install exiv2
-#install git
-install imagemagick --with-webp
-#install lynx
-#install node # This installs `npm` too using the recommended installation method
-#install p7zip
-#install pigz
-#install pv
-#install rename
-#install rhino
-#install tree
-#install webkit2png
-#install zopfli
-
-#install homebrew/versions/lua52
-
-# Remove outdated versions from the cellar
-cleanup
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/fuse'
+tap 'homebrew/science'
+tap 'homebrew/versions'
+cask 'java'
+cask 'osxfuse'
+cask 'xquartz'
+brew 'ant'
+brew 'autoconf'
+brew 'xz'
+brew 'automake'
+brew 'awscli'
+brew 'bash-completion'
+brew 'pkg-config'
+brew 'libpng', args: ['universal']
+brew 'freetype', args: ['universal']
+brew 'fontconfig', args: ['universal']
+brew 'pixman'
+brew 'gettext'
+brew 'libffi'
+brew 'pcre'
+brew 'glib'
+brew 'cairo'
+brew 'cmake'
+brew 'gmp'
+brew 'coreutils'
+brew 'git'
+brew 'docker'
+brew 'jpeg', args: ['universal']
+brew 'libtiff', args: ['universal']
+brew 'little-cms2', args: ['universal']
+brew 'ghostscript'
+brew 'epstool'
+brew 'exercism'
+brew 'faac'
+brew 'mpfr'
+brew 'libmpc'
+brew 'isl'
+brew 'gcc'
+brew 'fftw'
+brew 'findutils'
+brew 'fswatch'
+brew 'gd', args: ['universal']
+brew 'gdbm'
+brew 'gl2ps'
+brew 'gnu-sed'
+brew 'gnupg'
+brew 'lua'
+brew 'readline'
+brew 'makedepend'
+brew 'openssl', args: ['universal']
+brew 'mysql'
+brew 'icu4c'
+brew 'sqlite'
+brew 'python'
+brew 'postgresql'
+brew 'qt'
+brew 'gnuplot', args: ['with-aquaterm']
+brew 'libtasn1', args: ['universal']
+brew 'nettle'
+brew 'gnutls'
+brew 'gobject-introspection'
+brew 'libtool', args: ['universal']
+brew 'jasper', args: ['universal']
+brew 'graphicsmagick'
+brew 'harfbuzz'
+brew 'pango'
+brew 'graphviz'
+brew 'htop-osx'
+brew 'imagemagick'
+brew 'irssi'
+brew 'oniguruma'
+brew 'jq'
+brew 'lame'
+brew 'x264'
+brew 'xvid'
+brew 'libav'
+brew 'libevent'
+brew 'libgpg-error'
+brew 'libusb', args: ['universal']
+brew 'libusb-compat', args: ['universal']
+brew 'libgphoto2', args: ['universal']
+brew 'libicns', args: ['universal']
+brew 'libksba'
+brew 'libssh2'
+brew 'libxml2'
+brew 'libyaml'
+brew 'maven'
+brew 'mercurial'
+brew 'protobuf'
+brew 'mitmproxy'
+brew 'moreutils'
+brew 'multirust'
+brew 'nasm'
+brew 'nmap'
+brew 'node'
+brew 'plotutils'
+brew 'pstoedit'
+brew 'sip'
+brew 'pyqt'
+brew 'qscintilla2'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'redis'
+brew 'sane-backends', args: ['universal']
+brew 'sbt'
+brew 'scala'
+brew 'szip'
+brew 'tbb'
+brew 'texinfo'
+brew 'tmux'
+brew 'tree'
+brew 'typesafe-activator'
+brew 'watch'
+brew 'wget'
+brew 'wine'
+brew 'homebrew/fuse/sshfs'
+brew 'homebrew/science/veclibfort'
+brew 'homebrew/science/arpack'
+brew 'homebrew/science/glpk'
+brew 'homebrew/science/hdf5'
+brew 'homebrew/science/h5utils'
+brew 'homebrew/science/metis'
+brew 'homebrew/science/qhull'
+brew 'homebrew/science/qrupdate'
+brew 'homebrew/science/suite-sparse'
+brew 'homebrew/science/octave'
+brew 'homebrew/science/suite-sparse421'
+brew 'homebrew/versions/postgresql94'
+cask '1password'
+cask 'android-file-transfer'
+cask 'angband'
+cask 'aquaterm'
+cask 'arduino'
+cask 'audacity'
+cask 'battle-net'
+cask 'blender'
+cask 'bluestacks'
+cask 'crossover'
+cask 'dockertoolbox'
+cask 'dropbox'
+cask 'dwarf-fortress'
+cask 'firefox'
+cask 'flux'
+cask 'go'
+cask 'google-chrome'
+cask 'google-photos-backup'
+cask 'heroku-toolbelt'
+cask 'intellij-idea-ce'
+cask 'intellij-idea-ce-eap'
+cask 'iterm2'
+cask 'iterm2-beta'
+cask 'lyx'
+cask 'menumeters'
+cask 'moom'
+cask 'openoffice'
+cask 'parallels-desktop'
+cask 'pingendo'
+cask 'postico'
+cask 'serviio'
+cask 'sketchup'
+cask 'skype'
+cask 'slack'
+cask 'sonos'
+cask 'soundflower'
+cask 'sourcetree'
+cask 'spotify'
+cask 'steam'
+cask 'sublime-text3'
+cask 'telegram'
+cask 'thunderbird'
+cask 'transmission'
+cask 'virtualbox'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'whatsapp'
+cask 'xmind'
