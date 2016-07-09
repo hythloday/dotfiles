@@ -38,3 +38,8 @@ set convert-meta off
 
 # Use Alt/Meta + Delete to delete the preceding word
 "\e[3;3~": kill-word
+
+# fixup stupid iterm bug
+"\e\e[D": backward-word
+"\e\e[C": forward-word
+
