@@ -53,5 +53,5 @@ complete -C aws_completer aws
 
 #Thread stuff
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export PROJECT_HOME=$HOME/Work
 source /usr/local/bin/virtualenvwrapper.sh 2>/dev/null
