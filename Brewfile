@@ -29,6 +29,7 @@ brew "grep"
 brew "htop"
 brew "jq"
 brew "kafka", restart_service: true
+brew "kubernetes-cli"
 brew "moreutils"
 brew "nmap"
 brew "pwgen"
