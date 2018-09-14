@@ -1,179 +1,73 @@
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/boneyard'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/dupes'
-tap 'homebrew/fuse'
-tap 'homebrew/science'
-tap 'homebrew/services'
-tap 'homebrew/versions'
-tap 'petere/postgresql'
+tap "confluentinc/ccloud"
+tap "coursier/formulas"
+tap "homebrew/boneyard"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/dupes"
+tap "homebrew/fuse"
+tap "homebrew/services"
+tap "homebrew/versions"
+tap "lightbend/tools"
+cask "java"
+cask "osxfuse"
+brew "ammonite-repl"
+brew "readline"
+brew "python"
+brew "awscli"
+brew "bash"
+brew "bash-completion"
+brew "cockroach", restart_service: true
+brew "coreutils"
+brew "findutils"
+brew "fswatch"
+brew "git"
+brew "giter8"
+brew "glpk"
+brew "gnu-sed"
+brew "gnupg"
+brew "grep"
+brew "htop"
+brew "jq"
+brew "kafka", restart_service: true
+brew "moreutils"
+brew "nmap"
+brew "pwgen"
+brew "rustup-init"
+brew "sbt"
+brew "sshfs"
+brew "stunnel"
+brew "tmux"
+brew "tree"
+brew "typesafe-activator"
+brew "vault"
+brew "watch"
+brew "wget"
+brew "confluentinc/ccloud/ccloud"
+brew "coursier/formulas/coursier", args: ["HEAD"]
+brew "lightbend/tools/reactive-cli"
 
-brew 'ansible'
-brew 'ant'
-brew 'apache-spark'
-brew 'autoconf'
-brew 'automake'
-brew 'awscli'
-brew 'bash-completion'
-brew 'cairo'
-brew 'cmake'
-brew 'coreutils'
-brew 'dirmngr'
-brew 'docker'
-brew 'e2fsprogs'
-brew 'epstool'
-brew 'exercism'
-brew 'faac'
-brew 'fftw'
-brew 'findutils'
-brew 'fontconfig', args: ['universal']
-brew 'freetype', args: ['universal']
-brew 'fswatch'
-brew 'gcc'
-brew 'gd', args: ['universal']
-brew 'gdb'
-brew 'gdbm'
-brew 'gettext'
-brew 'ghostscript'
-brew 'git'
-brew 'gl2ps'
-brew 'glib'
-brew 'gmp'
-brew 'gnu-sed'
-brew 'gnupg'
-brew 'gnupg2'
-brew 'gnuplot', args: ['with-aquaterm']
-brew 'gnutls'
-brew 'go'
-brew 'gobject-introspection'
-brew 'gpg-agent'
-brew 'graphicsmagick'
-brew 'graphviz'
-brew 'harfbuzz'
-brew 'heroku'
-brew 'homebrew/boneyard/pyqt'
-brew 'homebrew/dupes/openldap'
-brew 'homebrew/dupes/tcl-tk'
-brew 'homebrew/fuse/sshfs'
-brew 'homebrew/science/arpack'
-brew 'homebrew/science/glpk'
-brew 'homebrew/science/h5utils'
-brew 'homebrew/science/hdf5'
-brew 'homebrew/science/metis'
-brew 'homebrew/science/octave'
-brew 'homebrew/science/qhull'
-brew 'homebrew/science/qrupdate'
-brew 'homebrew/science/suite-sparse'
-brew 'homebrew/science/veclibfort'
-brew 'htop-osx'
-brew 'icu4c'
-brew 'imagemagick'
-brew 'irssi'
-brew 'isl'
-brew 'jasper', args: ['universal']
-brew 'jpeg', args: ['universal']
-brew 'jq'
-brew 'lame'
-brew 'libassuan'
-brew 'libav'
-brew 'libevent'
-brew 'libffi'
-brew 'libgcrypt'
-brew 'libgpg-error'
-brew 'libgphoto2', args: ['universal']
-brew 'libicns', args: ['universal']
-brew 'libksba'
-brew 'libmpc'
-brew 'libpng', args: ['universal']
-brew 'libssh2'
-brew 'libtasn1', args: ['universal']
-brew 'libtiff', args: ['universal']
-brew 'libtool', args: ['universal']
-brew 'libusb', args: ['universal']
-brew 'libusb-compat', args: ['universal']
-brew 'libxml2'
-brew 'libyaml'
-brew 'little-cms2', args: ['universal']
-brew 'lua'
-brew 'makedepend'
-brew 'maven'
-brew 'mercurial'
-brew 'mitmproxy'
-brew 'moreutils'
-brew 'mpfr'
-brew 'multirust'
-brew 'mysql', restart_service: true
-brew 'nasm'
-brew 'nettle'
-brew 'nmap'
-brew 'node'
-brew 'oniguruma'
-brew 'openssl', args: ['universal']
-brew 'openssl@1.1'
-brew 'pango'
-brew 'pcre'
-brew 'petere/postgresql/postgresql-9.6'
-brew 'pinentry'
-brew 'pixman'
-brew 'pkg-config'
-brew 'plotutils'
-brew 'postgresql'
-brew 'protobuf'
-brew 'pstoedit'
-brew 'pth'
-brew 'python'
-brew 'qscintilla2'
-brew 'qt'
-brew 'rbenv'
-brew 'readline'
-brew 'redis'
-brew 'ruby-build'
-brew 'sane-backends', args: ['universal']
-brew 'sbt'
-brew 'scala'
-brew 'sip'
-brew 'sqlite'
-brew 'szip'
-brew 'tbb'
-brew 'texinfo'
-brew 'tmux'
-brew 'tree'
-brew 'typesafe-activator'
-brew 'watch'
-brew 'webp', args: ['universal']
-brew 'wget'
-brew 'wine'
-brew 'x264'
-brew 'xvid'
-brew 'xz', args: ['universal']
-cask '1password'
-cask 'android-file-transfer'
-cask 'arduino'
-cask 'battle-net'
-cask 'dropbox'
-cask 'flux'
-cask 'google-chrome'
-cask 'google-photos-backup'
-cask 'intellij-idea-ce'
-cask 'iterm2'
-cask 'java'
-cask 'menumeters'
-cask 'moom'
-cask 'pingendo'
-cask 'postico'
-cask 'serviio'
-cask 'skype'
-cask 'slack'
-cask 'sourcetree'
-cask 'spotify'
-cask 'steam'
-cask 'sublime-text-dev'
-cask 'telegram'
-cask 'thunderbird'
-cask 'transmission'
-cask 'vlc'
-cask 'whatsapp'
-cask 'xmind'
-cask 'xquartz'
+cask "1password"
+cask "arduino"
+cask "battle-net"
+cask "docker"
+cask "dropbox"
+cask "flux"
+cask "fly"
+cask "google-chrome"
+cask "google-cloud-sdk"
+cask "google-photos-backup"
+cask "intellij-idea-ce"
+cask "iterm2-beta"
+cask "java8"
+cask "minikube"
+cask "moom"
+cask "slack-beta"
+cask "spotify"
+cask "steam"
+cask "sublime-text-dev"
+cask "transmission"
+cask "vlc"
+cask "whatsapp"
