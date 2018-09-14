@@ -50,8 +50,12 @@ export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew_github_api_token)
 # AWS autocompletion
 complete -C aws_completer aws
 
+# rustup
+[ -d "$HOME/.cargo" ] && source $HOME/.cargo/env
 
-#Thread stuff
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Work
-source /usr/local/bin/virtualenvwrapper.sh 2>/dev/null
+export PATH=$PATH:$(gcloud info --format="value(installation.sdk_root)")/bin
+
+# Add all keys to the keychain
+for key in ~/.ssh/*.pub; do
+  echo ssh-add -K  $(echo $key | sed -e "s:.pub::g") 2>/dev/null ;
+done
